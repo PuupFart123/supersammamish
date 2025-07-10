@@ -75,6 +75,60 @@ const Hero = () => {
       }}>
         Join us in creating a sustainable, inclusive community that provides housing diversity, economic opportunity, and a gathering place for all Sammamish residents.
       </p>
+        <style>{`
+          @keyframes rainbowGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+          .rainbow-glow-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .rainbow-glow-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 120%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            border-radius: 20px;
+            background: linear-gradient(270deg, #ff5e62, #ff9966, #f9d423, #a8e063, #43cea2, #1976d2, #9d50bb, #ff5e62);
+            background-size: 1600% 1600%;
+            animation: rainbowGlow 10s ease-in-out infinite;
+            opacity: 0.7;
+            filter: blur(18px);
+            pointer-events: none;
+          }
+          .rainbow-petition-button {
+            position: relative;
+            display: inline-block;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            padding: 1rem 2.5rem;
+            font-size: 1.15rem;
+            font-family: 'Clash Display', 'Inter', sans-serif;
+            font-weight: 700;
+            color: #fff;
+            background: rgba(255,255,255,0.18);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            z-index: 1;
+            transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+            overflow: visible;
+            min-width: 200px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          .rainbow-petition-button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+          }
+        `}</style>
         <div 
           ref={buttonRef}
           style={{ 
@@ -106,25 +160,17 @@ const Hero = () => {
           >
             Learn More
           </a>
-          <a 
-            href="#support" 
-            className="hover-lift hover-scale"
-            style={{
-          display: 'inline-block',
-          padding: '1rem 2rem',
-          borderRadius: '12px',
-          background: 'rgba(0,122,255,0.08)',
-          color: '#007AFF',
-          fontWeight: 600,
-          fontSize: '1rem',
-          textDecoration: 'none',
-          border: '2px solid #007AFF',
-              boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
-              textTransform: 'lowercase',
-            }}
-          >
-            Get Involved
-          </a>
+          <div className="rainbow-glow-wrapper" style={{margin: '0 0.5rem'}}>
+            <div className="rainbow-glow-bg" />
+            <a 
+              href="https://chng.it/R2Z2twzTFH" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rainbow-petition-button hover-lift hover-scale"
+            >
+              Sign Our Petition
+            </a>
+          </div>
         </div>
       </div>
   </>

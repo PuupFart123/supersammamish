@@ -33,6 +33,11 @@ const Support = () => {
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
+        @keyframes rainbowButton {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
         .rainbow-glow {
           position: absolute;
           top: 50%;
@@ -64,6 +69,53 @@ const Support = () => {
           transform: translateY(-4px) scale(1.025);
           box-shadow: 0 6px 32px rgba(59,130,246,0.10);
         }
+        .rainbow-glow-wrapper {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .rainbow-glow-bg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 120%;
+          height: 120%;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+          border-radius: 20px;
+          background: linear-gradient(270deg, #ff5e62, #ff9966, #f9d423, #a8e063, #43cea2, #1976d2, #9d50bb, #ff5e62);
+          background-size: 1600% 1600%;
+          animation: rainbowGlow 10s ease-in-out infinite;
+          opacity: 0.7;
+          filter: blur(18px);
+          pointer-events: none;
+        }
+        .rainbow-button {
+          position: relative;
+          display: inline-block;
+          border: 2px solid rgba(255,255,255,0.3);
+          border-radius: 12px;
+          padding: 20px 48px;
+          font-size: 1.3rem;
+          font-family: 'Clash Display', 'Inter', sans-serif;
+          font-weight: 700;
+          color: #fff;
+          background: rgba(255,255,255,0.18);
+          text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+          box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+          z-index: 1;
+          transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+          overflow: visible;
+          min-width: 280px;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .rainbow-button:hover {
+          transform: translateY(-4px) scale(1.05);
+          box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+        }
       `}</style>
       <div style={{
         maxWidth: '800px',
@@ -84,7 +136,7 @@ const Support = () => {
           fontFamily: 'Inter, sans-serif',
           fontSize: '1.2rem',
           lineHeight: '1.7',
-          marginBottom: '40px',
+          marginBottom: '50px',
           color: '#e2e8f0',
           textTransform: 'lowercase',
         }}>
@@ -93,64 +145,53 @@ const Support = () => {
         </p>
         <div style={{
           display: 'flex',
-          gap: '20px',
-          justifyContent: 'center',
-          flexWrap: 'wrap'
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '25px',
+          marginBottom: '60px'
         }}>
-          <a
-            href="https://chng.it/R2Z2twzTFH"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              padding: '16px 32px',
-              backgroundColor: '#ffffff',
-              color: '#3b82f6',
-              border: 'none',
-              borderRadius: '8px',
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              fontFamily: 'Inter, sans-serif',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              textDecoration: 'none',
-              display: 'inline-block'
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 6px 20px rgba(0,0,0,0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-            }}>
-            Sign the Petition
-          </a>
+          <div className="rainbow-glow-wrapper" style={{marginBottom: '25px'}}>
+            <div className="rainbow-glow-bg" />
+            <a
+              href="https://chng.it/R2Z2twzTFH"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rainbow-button"
+            >
+              Sign the Petition
+            </a>
+          </div>
           <a
             href="https://www.sammamish.us/government/city-council/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              padding: '16px 32px',
-              backgroundColor: 'transparent',
+              padding: '18px 36px',
+              backgroundColor: 'rgba(255,255,255,0.15)',
               color: '#ffffff',
-              border: '2px solid #ffffff',
-              borderRadius: '8px',
-              fontSize: '1.1rem',
+              border: '2px solid rgba(255,255,255,0.3)',
+              borderRadius: '12px',
+              fontSize: '1.2rem',
               fontWeight: '600',
               fontFamily: 'Inter, sans-serif',
               cursor: 'pointer',
-              transition: 'all 0.3s ease',
+              transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)',
               textDecoration: 'none',
-              display: 'inline-block'
+              display: 'inline-block',
+              minWidth: '280px',
+              textAlign: 'center',
+              backdropFilter: 'blur(10px)',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.1)'
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = '#ffffff';
-              e.target.style.color = '#3b82f6';
+              e.target.style.backgroundColor = 'rgba(255,255,255,0.25)';
+              e.target.style.transform = 'translateY(-2px) scale(1.02)';
+              e.target.style.boxShadow = '0 8px 24px rgba(0,0,0,0.2)';
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = 'transparent';
-              e.target.style.color = '#ffffff';
+              e.target.style.backgroundColor = 'rgba(255,255,255,0.15)';
+              e.target.style.transform = 'translateY(0) scale(1)';
+              e.target.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
             }}>
             Attend Meetings
           </a>
