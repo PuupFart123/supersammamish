@@ -110,8 +110,8 @@ const Hero = () => {
             border-radius: 12px;
             padding: 1rem 2.5rem;
             font-size: 1.15rem;
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 400;
             color: #fff;
             background: rgba(255,255,255,0.18);
             text-shadow: 0 1px 2px rgba(0,0,0,0.18);
@@ -147,14 +147,15 @@ const Hero = () => {
             href="#vision" 
             className="hover-lift hover-scale"
             style={{
-              display: 'inline-block',
-              padding: '1rem 2rem',
-              borderRadius: '12px',
-              background: '#007AFF',
-              color: 'white',
-              fontWeight: 600,
+          display: 'inline-block',
+          padding: '1rem 2rem',
+          borderRadius: '12px',
+          background: '#007AFF',
+          color: 'white',
+          fontWeight: 400,
               fontSize: '1.15rem',
-              textDecoration: 'none',
+              fontFamily: 'Clash Display, sans-serif',
+          textDecoration: 'none',
               boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
               textAlign: 'center',
               textTransform: 'lowercase',
@@ -172,7 +173,7 @@ const Hero = () => {
             >
               sign our petition
             </a>
-          </div>
+        </div>
         </div>
       </div>
   </>

@@ -98,8 +98,8 @@ const Support = () => {
           border-radius: 12px;
           padding: 20px 48px;
           font-size: 1.15rem;
-          font-family: 'Inter', sans-serif;
-          font-weight: 700;
+          font-family: 'Clash Display', sans-serif;
+          font-weight: 400;
           color: #fff;
           background: rgba(255,255,255,0.18);
           text-shadow: 0 1px 2px rgba(0,0,0,0.18);
@@ -173,8 +173,8 @@ const Support = () => {
               border: '2px solid rgba(255,255,255,0.3)',
               borderRadius: '12px',
               fontSize: '1.15rem',
-              fontWeight: '600',
-              fontFamily: 'Inter, sans-serif',
+              fontWeight: '400',
+              fontFamily: 'Clash Display, sans-serif',
               cursor: 'pointer',
               transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)',
               textDecoration: 'none',
