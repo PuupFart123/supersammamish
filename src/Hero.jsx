@@ -110,7 +110,7 @@ const Hero = () => {
             border-radius: 12px;
             padding: 1rem 2.5rem;
             font-size: 1.15rem;
-            font-family: 'Clash Display', 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-weight: 700;
             color: #fff;
             background: rgba(255,255,255,0.18);
