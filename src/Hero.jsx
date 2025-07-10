@@ -123,6 +123,7 @@ const Hero = () => {
             text-align: center;
             text-decoration: none;
             cursor: pointer;
+            text-transform: lowercase;
           }
           .rainbow-petition-button:hover {
             transform: translateY(-4px) scale(1.05);
@@ -146,19 +147,20 @@ const Hero = () => {
             href="#vision" 
             className="hover-lift hover-scale"
             style={{
-          display: 'inline-block',
-          padding: '1rem 2rem',
-          borderRadius: '12px',
-          background: '#007AFF',
-          color: 'white',
-          fontWeight: 600,
-          fontSize: '1rem',
-          textDecoration: 'none',
+              display: 'inline-block',
+              padding: '1rem 2rem',
+              borderRadius: '12px',
+              background: '#007AFF',
+              color: 'white',
+              fontWeight: 600,
+              fontSize: '1.15rem',
+              textDecoration: 'none',
               boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+              textAlign: 'center',
               textTransform: 'lowercase',
             }}
           >
-            Learn More
+            learn more
           </a>
           <div className="rainbow-glow-wrapper" style={{margin: '0 0.5rem'}}>
             <div className="rainbow-glow-bg" />
@@ -168,7 +170,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="rainbow-petition-button hover-lift hover-scale"
             >
-              Sign Our Petition
+              sign our petition
             </a>
           </div>
         </div>

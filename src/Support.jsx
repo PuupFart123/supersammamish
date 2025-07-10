@@ -97,7 +97,7 @@ const Support = () => {
           border: 2px solid rgba(255,255,255,0.3);
           border-radius: 12px;
           padding: 20px 48px;
-          font-size: 1.3rem;
+          font-size: 1.15rem;
           font-family: 'Inter', sans-serif;
           font-weight: 700;
           color: #fff;
@@ -111,6 +111,7 @@ const Support = () => {
           text-align: center;
           text-decoration: none;
           cursor: pointer;
+          text-transform: lowercase;
         }
         .rainbow-button:hover {
           transform: translateY(-4px) scale(1.05);
@@ -158,7 +159,7 @@ const Support = () => {
               rel="noopener noreferrer"
               className="rainbow-button"
             >
-              Sign the Petition
+              sign the petition
             </a>
           </div>
           <a
@@ -171,7 +172,7 @@ const Support = () => {
               color: '#ffffff',
               border: '2px solid rgba(255,255,255,0.3)',
               borderRadius: '12px',
-              fontSize: '1.2rem',
+              fontSize: '1.15rem',
               fontWeight: '600',
               fontFamily: 'Inter, sans-serif',
               cursor: 'pointer',
@@ -181,7 +182,8 @@ const Support = () => {
               minWidth: '280px',
               textAlign: 'center',
               backdropFilter: 'blur(10px)',
-              boxShadow: '0 4px 16px rgba(0,0,0,0.1)'
+              boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
+              textTransform: 'lowercase',
             }}
             onMouseEnter={(e) => {
               e.target.style.backgroundColor = 'rgba(255,255,255,0.25)';
@@ -193,7 +195,7 @@ const Support = () => {
               e.target.style.transform = 'translateY(0) scale(1)';
               e.target.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
             }}>
-            Attend Meetings
+            attend meetings
           </a>
         </div>
         <div style={{
